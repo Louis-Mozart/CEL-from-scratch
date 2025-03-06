@@ -5,7 +5,7 @@ from create_ontology import *
 
 
 # Define a target class expression (e.g., animals that can fly)
-target_expr = class_expression({"hasWings": True})
+target_expr = class_expression({"hasFur": True})
 pos_examples, neg_examples = get_examples(target_expr)
 
 print("Positive Examples:", {p.name for p in pos_examples})
@@ -14,7 +14,10 @@ print("Negative Examples:", {n.name for n in neg_examples})
 # Step 4: Learning the Class Expression (Refinement Strategy)
 def learn_class_expression(pos_examples, neg_examples):
     """Find the simplest class expression covering positive but not negative examples."""
-    properties = [prop.name for prop in Animal.get_class_properties()]
+    properties = [prop.name for prop in onto.Animal.get_class_properties()]
+    print(Animal.get_class_properties())
+    print(properties)
+    exit(0)
     
     # Generate all possible property constraints
     candidate_expressions = []
