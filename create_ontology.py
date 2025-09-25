@@ -1,8 +1,7 @@
 from owlready2 import *
 
 # def create_onto():
-
-onto = get_ontology("http://example.org/animals.owl")  # No .load()
+onto = get_ontology("http://example.org/animals.owl")   
 
 with onto:
     class Animal(Thing): pass
@@ -25,7 +24,6 @@ with onto:
     penguin.hasWings = [True]; penguin.hasFur = [False]; penguin.livesInWater = [True]
 
 onto.save("animals.owl")  # Save ontology to a file
-
 
 # Step 2: Define a Class Expression Structure
 def class_expression(expr):
