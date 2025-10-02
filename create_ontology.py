@@ -4,7 +4,7 @@ from owlready2 import *
 onto = get_ontology("http://example.org/animals.owl")   
 
 with onto:
-    class Animal(Thing): pass
+    class Animal(Thing): pass # Top concept
     class hasWings(Animal >> bool): pass
     class hasFur(Animal >> bool): pass
     class livesInWater(Animal >> bool): pass
