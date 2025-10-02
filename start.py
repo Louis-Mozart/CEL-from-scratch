@@ -29,7 +29,7 @@ def learn_class_expression(pos_examples, neg_examples):
                 if all(expr_func(p) for p in pos_examples) and not any(expr_func(n) for n in neg_examples):
                     candidate_expressions.append(expr)
     
-    # Return the simplest expression (smallest number of constraints)
+    # Return the simplest expression
     return min(candidate_expressions, key=lambda e: len(e), default=None)
 
 # Learn an expression for the given examples
