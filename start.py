@@ -2,8 +2,6 @@ from owlready2 import *
 import itertools
 from create_ontology import *
 
-
-
 # Define a target class expression (e.g., animals that can fly)
 target_expr = class_expression({"hasFur": True})
 pos_examples, neg_examples = get_examples(target_expr)
@@ -15,7 +13,6 @@ print("Negative Examples:", {n.name for n in neg_examples})
 def learn_class_expression(pos_examples, neg_examples):
     """ Find the simplest class expression covering positive but not negative examples."""
     properties = [prop.name for prop in onto.Animal.get_class_properties()]
-
     
     # Generate all possible property constraints
     candidate_expressions = []
