@@ -22,7 +22,7 @@ with onto:
     shark.hasWings = [False]; shark.hasFur = [False]; shark.livesInWater = [True]
     bat.hasWings = [True]; bat.hasFur = [True]; bat.livesInWater = [False]
     penguin.hasWings = [True]; penguin.hasFur = [False]; penguin.livesInWater = [True]
-
+    
 onto.save("animals.owl")  # Save ontology to a file
 
 # Step 2: Define a Class Expression Structure
